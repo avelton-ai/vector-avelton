@@ -2568,7 +2568,7 @@ pub fn menu_tree_named(english_names: bool) -> Vec<(&'static str, Vec<Item>)> {
             vec![
                 c("Join Our Discord", "help.discord"),
                 c("Avelton Website", "help.website"),
-                c("Vector Avelton on getartcraft.com", "help.appPage"),
+                c("Vector Avelton on avelton.online", "help.appPage"),
                 c("Vector Avelton on GitHub", "help.github"),
                 Sep,
                 c("Search Commands…", "help.commandPalette"),

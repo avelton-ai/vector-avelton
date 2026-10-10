@@ -418,7 +418,7 @@ fn main() -> std::process::ExitCode {
             _ if a.starts_with("--automation-write-root=") => write_root = a.split_once('=').map(|(_, d)| d.into()),
             "--in-window-menus" => in_window_menus = true,
             "--version" => {
-                println!("vectorcraft {}", env!("CARGO_PKG_VERSION"));
+                println!("vector-avelton {}", env!("CARGO_PKG_VERSION"));
                 return std::process::ExitCode::SUCCESS;
             }
             _ => files.push(a),
