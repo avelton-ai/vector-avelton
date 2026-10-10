@@ -4,6 +4,8 @@ import argparse
 import functools
 import http.server
 import json
+import os
+import sys
 import threading
 import time
 import zipfile
@@ -39,9 +41,14 @@ def main():
         try:
             with sync_playwright() as playwright:
                 # Full Chromium uses the current headless compositor and WebGPU stack.
-                browser = playwright.chromium.launch(channel="chromium", args=[
-                    "--use-angle=swiftshader", "--enable-unsafe-webgpu",
-                    "--disable-dev-shm-usage"])
+                graphics = ["--use-angle=swiftshader"]
+                if sys.platform.startswith("linux"):
+                    graphics = ["--enable-gpu", "--enable-features=Vulkan",
+                                "--use-angle=vulkan", "--use-vulkan=swiftshader",
+                                "--use-webgpu-adapter=swiftshader", "--disable-vulkan-surface"]
+                browser = playwright.chromium.launch(
+                    channel="chromium", headless=not bool(os.getenv("DISPLAY")),
+                    args=graphics + ["--enable-unsafe-webgpu", "--disable-dev-shm-usage"])
                 try:
                     page = browser.new_page(viewport={"width": 1440, "height": 1000},
                                             device_scale_factor=1)
