@@ -14,6 +14,7 @@ name: Packaging lint
     - packaging/**
     - assets/app-icon/**
   workflow_dispatch: null
+  workflow_call: {}
 permissions:
   contents: read
 concurrency:
