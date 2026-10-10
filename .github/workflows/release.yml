@@ -101,6 +101,7 @@ jobs:
     - uses: Swatinem/rust-cache@v2
       with:
         key: release-windows-${{ matrix.arch }}
+        cache-on-failure: true
     - name: Install WiX
       shell: pwsh
       run: |
@@ -164,6 +165,7 @@ jobs:
     - uses: Swatinem/rust-cache@v2
       with:
         key: release-linux-${{ matrix.arch }}
+        cache-on-failure: true
     - name: Build and package (AppImage, deb, rpm, tar.gz)
       env:
         CRAFT_FONTS_DIR: ${{ github.workspace }}/craft-fonts
@@ -211,6 +213,7 @@ jobs:
     - uses: Swatinem/rust-cache@v2
       with:
         key: release-web
+        cache-on-failure: true
     - name: Install trunk
       run: |
         curl -fsSL "https://github.com/trunk-rs/trunk/releases/download/v${TRUNK_VERSION}/trunk-x86_64-unknown-linux-gnu.tar.gz" \
@@ -326,6 +329,7 @@ jobs:
     - uses: Swatinem/rust-cache@v2
       with:
         key: release-macos-${{ matrix.target }}
+        cache-on-failure: true
     - name: Build native slice
       run: cargo build --release --locked -p vectorcraft -p vectorcraft-cli --target "${{ matrix.target }}"
     - uses: actions/upload-artifact@v4
