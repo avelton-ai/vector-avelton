@@ -5,7 +5,6 @@ import functools
 import http.server
 import json
 import os
-import sys
 import threading
 import time
 import zipfile
@@ -20,9 +19,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("bundle", type=Path)
     parser.add_argument("--output", type=Path, default=Path("target/avelton-smoke"))
+    parser.add_argument("--hardware-gpu", action="store_true",
+                        help="Use the browser's physical GPU instead of CI software WebGL")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
-    metadata = json.loads(Path("avelton.json").read_text())
+    metadata = json.loads((Path(__file__).resolve().parents[1] / "avelton.json").read_text())
     evidence = {"name": metadata["name"], "version": metadata["version"],
                 "errors": [], "console": [], "status": "failed"}
     with TemporaryDirectory(prefix="avelton-smoke-") as tmp:
@@ -41,14 +42,15 @@ def main():
         try:
             with sync_playwright() as playwright:
                 # Full Chromium uses the current headless compositor and WebGPU stack.
-                graphics = ["--use-angle=swiftshader"]
-                if sys.platform.startswith("linux"):
-                    graphics = ["--enable-gpu", "--enable-features=Vulkan",
-                                "--use-angle=vulkan", "--use-vulkan=swiftshader",
-                                "--use-webgpu-adapter=swiftshader", "--disable-vulkan-surface"]
+                # Software WebGL is supported by every app. Chromium's experimental
+                # software WebGPU adapter loses its device in Linux CI; retain the
+                # blank-canvas check and test the supported fallback instead.
+                graphics = [] if args.hardware_gpu else ["--use-angle=swiftshader",
+                    "--enable-unsafe-swiftshader", "--disable-blink-features=WebGPU"]
+                evidence["graphics"] = "hardware" if args.hardware_gpu else "software-webgl"
                 browser = playwright.chromium.launch(
                     channel="chromium", headless=not bool(os.getenv("DISPLAY")),
-                    args=graphics + ["--enable-unsafe-webgpu", "--disable-dev-shm-usage"])
+                    args=graphics + ["--disable-dev-shm-usage"])
                 try:
                     page = browser.new_page(viewport={"width": 1440, "height": 1000},
                                             device_scale_factor=1)
