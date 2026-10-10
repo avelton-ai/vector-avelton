@@ -176,7 +176,7 @@ pub const UI_COMMANDS: &[(&str, &str, &str, &str)] = &[
         "shortcuts.preset",
         "Keyboard Shortcut Set",
         "",
-        "{name: \"VectorCraft Defaults\" | \"Classic Defaults\"} (names of earlier versions are accepted)",
+        "{name: \"Vector Avelton Defaults\" | \"Classic Defaults\"} (names of earlier versions are accepted)",
     ),
     ("shortcuts.export", "Export Keyboard Shortcuts…", "", "{path?}"),
     ("shortcuts.import", "Import Keyboard Shortcuts…", "", "{path? | data?}"),
@@ -315,9 +315,9 @@ pub const UI_COMMANDS: &[(&str, &str, &str, &str)] = &[
         "",
         "{} opens the Save PDF dialog; with params = document.exportPdf options written to path (asked when missing; viewAfterSaving opens the file) → {path, bytes, warnings}",
     ),
-    ("help.about", "About VectorCraft", "", "{}"),
+    ("help.about", "About Vector Avelton", "", "{}"),
     ("help.commandPalette", "Search Commands…", "Cmd+Shift+/", "{}"),
-    ("app.quit", "Quit VectorCraft", "Cmd+Q", "{}"),
+    ("app.quit", "Quit Vector Avelton", "Cmd+Q", "{}"),
     (
         "ui.swatchOptions",
         "Swatch Options…",
@@ -569,7 +569,7 @@ pub const UI_COMMANDS: &[(&str, &str, &str, &str)] = &[
         "ui.pdfPresetDialog",
         "PDF Preset",
         "",
-        "{name?: a saved preset to edit | preset?: the preset a new one starts from (default VectorCraft Default)} open the preset editor (dialog `pdfPreset`: the Save PDF dialog's option fields plus `name` and `description`); OK runs pdf.preset.save and returns to PDF Presets",
+        "{name?: a saved preset to edit | preset?: the preset a new one starts from (default Vector Avelton Default)} open the preset editor (dialog `pdfPreset`: the Save PDF dialog's option fields plus `name` and `description`); OK runs pdf.preset.save and returns to PDF Presets",
     ),
     ("file.openRecent11", "Open Recent File 11", "", "{}"),
     ("file.openRecent12", "Open Recent File 12", "", "{}"),
@@ -1936,9 +1936,9 @@ pub fn menu_tree_named(english_names: bool) -> Vec<(&'static str, Vec<Item>)> {
     let panel = |label: &'static str, id: &'static str| cp(label, "window.panel", json!({ "panel": id }));
     vec![
         (
-            "VectorCraft",
+            "Vector Avelton",
             vec![
-                c("About VectorCraft", "help.about"),
+                c("About Vector Avelton", "help.about"),
                 c("Join Our Discord", "help.discord"),
                 Sep,
                 c("Settings…", "edit.preferences"),
@@ -1952,7 +1952,7 @@ pub fn menu_tree_named(english_names: bool) -> Vec<(&'static str, Vec<Item>)> {
                 Sep,
                 sub("UI Brightness", Brightness::ALL.iter().map(|b| cp(b.label(), "window.brightness", json!({"brightness": b.id()}))).collect()),
                 Sep,
-                c("Quit VectorCraft", "app.quit"),
+                c("Quit Vector Avelton", "app.quit"),
             ],
         ),
         (
@@ -2567,14 +2567,14 @@ pub fn menu_tree_named(english_names: bool) -> Vec<(&'static str, Vec<Item>)> {
             "Help",
             vec![
                 c("Join Our Discord", "help.discord"),
-                c("ArtCraft Website", "help.website"),
-                c("VectorCraft on getartcraft.com", "help.appPage"),
-                c("VectorCraft on GitHub", "help.github"),
+                c("Avelton Website", "help.website"),
+                c("Vector Avelton on avelton.online", "help.appPage"),
+                c("Vector Avelton on GitHub", "help.github"),
                 Sep,
                 c("Search Commands…", "help.commandPalette"),
-                todos("VectorCraft Help…", "F1"),
+                todos("Vector Avelton Help…", "F1"),
                 Sep,
-                c("About VectorCraft", "help.about"),
+                c("About Vector Avelton", "help.about"),
             ],
         ),
     ]
@@ -3460,7 +3460,7 @@ pub fn menu_strings() -> std::collections::BTreeSet<String> {
             match it {
                 Item::Cmd(l, id, _) => {
                     let size = l.strip_suffix(" pt").is_some_and(|n| n.chars().all(|c| c.is_ascii_digit()));
-                    // VectorCraft › Language lists each language by its own name.
+                    // Vector Avelton › Language lists each language by its own name.
                     let language_name = *id == "app.language" && crate::i18n::Lang::all().any(|lang| lang.name() == *l);
                     if !user_data(id) && !size && !language_name && *l != "—" {
                         out.insert(l.to_string());

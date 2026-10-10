@@ -8,7 +8,7 @@ Affinity files.
 
 ## What is imported
 
-| Affinity | VectorCraft |
+| Affinity | Vector Avelton |
 |---|---|
 | Pages, Publisher spreads (one or two pages) | artboards, spreads side by side |
 | Artboards (legacy `ABEn` or Affinity 3 `phrp`/`aprp`), with name, paint and any transform | artboards plus a clip group with the actual vector outline, background and stroke |
@@ -27,7 +27,7 @@ Affinity files.
 | Placed images (`ImgN`): the original JPEG/PNG embedded in the file | embedded images |
 | Pixel layers (`Rstr`): RGBA 8/16-bit and CMYK 8-bit tiles, cropped to their content; source-backed RGBA8 JPEG/PNG tiles with matching dimensions and zero origin | embedded PNG images |
 | Embedded documents and symbols (`EmbN`) | the picture Affinity cached of them |
-| Opacity, visibility, lock, names, the blend modes VectorCraft has | the same |
+| Opacity, visibility, lock, names, the blend modes Vector Avelton has | the same |
 
 Everything else is reported in the import warnings, one line per kind with a count, never
 dropped silently: layer effects, adjustment layers and live filters, brush and pressure strokes,
@@ -97,7 +97,7 @@ The reader also has an independent copy in PhotoCraft's `photocraft-affinity`.
 * `engine/tests/affinity_corpus.rs` requires editable native import, exact `.vectorcraft`
   save/reload, and SVG/PDF/PSD export of every board in all 33 current files. It checks SVG/PDF
   dimensions and reimport, and independently decodes PSD merged pixels using the published
-  specification. These are VectorCraft consistency checks, not independent Affinity PSD oracles.
+  specification. These are Vector Avelton consistency checks, not independent Affinity PSD oracles.
   Saved-thumbnail comparisons cover the existing 22 documents plus nine new representative
   fixtures, checking every board; unsupported effects and text layout are not claimed visually
   faithful. The Affinity corpus workflow requires the files, so missing fixtures cannot silently
@@ -114,7 +114,7 @@ The reader also has an independent copy in PhotoCraft's `photocraft-affinity`.
   ```
 
 The source audit, licensing decisions and remaining complex-document/font cases are recorded in
-[affinity-validation.md](../../docs/affinity-validation.md). Reopening VectorCraft's exports in
+[affinity-validation.md](../../docs/affinity-validation.md). Reopening Vector Avelton's exports in
 Affinity remains an independent validation step that hasn't been done.
 
 What has not been verified: files from Affinity builds or platforms outside the public set, files

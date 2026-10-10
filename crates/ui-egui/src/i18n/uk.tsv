@@ -1,7 +1,7 @@
 # Ukrainian (uk) catalog. Same format as zh-hant.tsv: context <TAB> source <TAB> translation.
 # Empty context = a plain UI string; @plural = one|few|many; @msg = a status/error template.
 #
-# Clean-room: translations of VectorCraft's labels, reviewed against their English meaning.
+# Clean-room: translations of Vector Avelton's labels, reviewed against their English meaning.
 # The existing Russian catalog supplied the row layout and a machine-assisted draft, not any
 # other product's localisation resources. Ukrainian vector-illustration terminology:
 # монтажна область, шар, обведення, заливка, контур, опорна точка, зразки, пензель, виділення.
@@ -56,7 +56,7 @@
 	A lower value follows the stroke closely; a higher one gives fewer points and smoother curves.	Менше значення точніше відтворює обведення; більше дає менше точок і плавніші криві.
 	A new preset starting from the selected one	Новий набір на основі вибраного
 	A saved copy of the selected preset	Збережена копія вибраного набору
-	About VectorCraft	Про програму VectorCraft
+	About Vector Avelton	Про програму Vector Avelton
 	above	зверху
 	Absolute Position	Абсолютна позиція
 	Accurate	Точний
@@ -159,7 +159,7 @@
 	Appearance Panel	Панель «Оформлення»
 	Appearance panel	Панель «Оформлення»
 	Applies when the linked file is relinked or updated.	Використовується при повторній прив’язці або оновленні пов’язаного файлу.
-	Applies the next time VectorCraft starts.	Застосовується при наступному запуску VectorCraft.
+	Applies the next time Vector Avelton starts.	Застосовується при наступному запуску Vector Avelton.
 	Apply	Застосувати
 	Apply Brush	Застосувати пензель
 	Apply Character Style	Застосувати стиль символу
@@ -197,8 +197,8 @@
 	Artboard {number}	Монтажна область {number}
 	Artboard:	Монтажна область:
 	Artboards	Монтажні області
-	ArtCraft Website	Веб-сайт ArtCraft
-	ArtCraft website	Веб-сайт ArtCraft
+	Avelton Website	Веб-сайт Avelton
+	Avelton website	Веб-сайт Avelton
 	Artwork Colors	Кольори малюнка
 	As Multiple Assets	Як кілька ресурсів
 	As Single Asset	Як один ресурс
@@ -1265,8 +1265,8 @@
 	Japanese	Японська
 	Join	З’єднати
 	Join Our Discord	Приєднуйтесь до нашого Discord
-	Join our Discord	Приєднуйтесь до нашого Discord
-	Join the ArtCraft community on Discord (discord.gg/artcraft)	Приєднуйтесь до спільноти ArtCraft Discord (discord.gg/artcraft)
+	Avelton support	Підтримка Avelton
+	Get support for Avelton on GitHub	Підтримка Avelton (GitHub)
 	Join the lines of each paragraph	Поєднувати рядки кожного абзацу
 	Join Tool	Інструмент «З’єднання»
 	Justification…	Вирівнювання за шириною…
@@ -1826,7 +1826,7 @@
 	Paragraph Style Options	Параметри стилю абзацу
 	Paragraph Styles	Стилі абзаців
 	Paragraph Symbol	Символ абзацу
-	Part of ArtCraft. MIT OR Apache-2.0. Fonts: Source Sans 3, Inter, JetBrains Mono (OFL). Icons: Lucide (ISC) + VectorCraft.	Частина ArtCraft. MIT OR Apache-2.0. Шрифти: Source Sans 3, Inter, JetBrains Mono (OFL). Значки: Lucide (ISC) + VectorCraft.
+	Part of Avelton. MIT OR Apache-2.0. Fonts: Source Sans 3, Inter, JetBrains Mono (OFL). Icons: Lucide (ISC) + Vector Avelton.	Частина Avelton. MIT OR Apache-2.0. Шрифти: Source Sans 3, Inter, JetBrains Mono (OFL). Значки: Lucide (ISC) + Vector Avelton.
 	Password	Пароль
 	Paste	Вставити
 	Paste in Back	Вставити позаду
@@ -1999,7 +1999,7 @@
 	Quarter Space	Четверта шпація
 	Quick Actions	Швидкі дії
 	Quickly start a new file	Швидко створити новий файл
-	Quit VectorCraft	Вийти з VectorCraft
+	Quit Vector Avelton	Вийти з Vector Avelton
 	Radar Graph Tool	Інструмент «Пелюсткова діаграма»
 	Radial	Радіальний
 	Radial Glows	Радіальні світіння
@@ -2117,7 +2117,7 @@
 	{count} folder(s) or file(s) couldn't be read	Не вдалося прочитати папок або файлів: {count}
 	The search stopped at its limit: search a smaller folder.	Пошук зупинився на межі: виберіть меншу папку.
 	Copy only fonts you own or are licensed to install.	Копіюйте лише шрифти, які належать вам або які ви маєте право встановлювати за ліцензією.
-	VectorCraft copies the fonts to {folder}.	VectorCraft копіює шрифти в {folder}.
+	Vector Avelton copies the fonts to {folder}.	Vector Avelton копіює шрифти в {folder}.
 	Registered Trademark Symbol	Символ зареєстрованого товарного знаку
 	Registration marks	Мітки поєднання
 	Registry name:	Ім’я у реєстрі:
@@ -2217,7 +2217,7 @@
 	Revert	Повернути
 	Revert to the saved version of “{name}”?	Повернутися до збереженої версії «{name}»?
 	Replace “{name}”, the file this document was opened from?	Замінити «{name}» — файл, з якого відкрито цей документ?
-	Opening it left out what VectorCraft can't read yet ({what}), so replacing it loses that for good. Save under another name to keep it.	При відкритті було пропущено те, що VectorCraft поки що не вміє читати ({what}), тому заміна файлу втратить це назавжди. Щоб зберегти це, збережіть документ під іншим ім’ям.
+	Opening it left out what Vector Avelton can't read yet ({what}), so replacing it loses that for good. Save under another name to keep it.	При відкритті було пропущено те, що Vector Avelton поки що не вміє читати ({what}), тому заміна файлу втратить це назавжди. Щоб зберегти це, збережіть документ під іншим ім’ям.
 	Revolve…	Обертання…
 	RGB Color	Колір RGB
 	Right	Праворуч
@@ -2978,10 +2978,10 @@
 	Vector Halftone	Векторний напівтон
 	Vector Halftone…	Векторний напівтон…
 	Vector illustration — fast, open, scriptable.	Векторне малювання — швидке, відкрите, кероване сценаріями.
-	VectorCraft didn't quit normally last time. These documents had unsaved changes:	VectorCraft не завершився нормально минулого разу. У цих документах були незбережені зміни:
-	VectorCraft Help…	Довідка VectorCraft…
-	VectorCraft on getartcraft.com	VectorCraft на getartcraft.com
-	VectorCraft on GitHub	VectorCraft на GitHub
+	Vector Avelton didn't quit normally last time. These documents had unsaved changes:	Vector Avelton не завершився нормально минулого разу. У цих документах були незбережені зміни:
+	Vector Avelton Help…	Довідка Vector Avelton…
+	Vector Avelton on avelton.online	Vector Avelton на avelton.online
+	Vector Avelton on GitHub	Vector Avelton на GitHub
 	Vectors	Вектори
 	Version {version} — open-source vector illustration in pure Rust.	Версія {version} — векторне малювання з відкритим кодом, написане на Rust.
 	Version:	Версія:
@@ -3020,7 +3020,7 @@
 	Web Snap:	Прив’язка до web:
 	Weight	Товщина
 	Weight:	Товщина:
-	Welcome to VectorCraft	Ласкаво просимо до VectorCraft
+	Welcome to Vector Avelton	Ласкаво просимо до Vector Avelton
 	When pasting text	При вставці тексту
 	White	Білий
 	Widget Position:	Положення віджету:
@@ -3370,7 +3370,7 @@ axis	Both	Обидві
 @msg	can't encode the document: {0}	не вдалося закодувати документ: {0}
 @msg	can't parse shortcut `{c}`	не вдалося розібрати поєднання `{c}`
 @msg	can't parse shortcut `{s}` for `{k}`	не вдалося розібрати поєднання `{s}` для `{k}`
-@msg	can't save version {0}: VectorCraft writes versions {MIN_VERSION} to {VERSION}	не вдалося зберегти версію {0}: VectorCraft записує версії від {MIN_VERSION} до {VERSION}
+@msg	can't save version {0}: Vector Avelton writes versions {MIN_VERSION} to {VERSION}	не вдалося зберегти версію {0}: Vector Avelton записує версії від {MIN_VERSION} до {VERSION}
 @msg	can't write .{ext} images	не вдалося записати зображення .{ext}
 @msg	cannot distort a zero-size bounding box	не можна спотворити обмежувальну рамку нульового розміру
 @msg	cannot read PDF: {0}	не вдалося прочитати PDF: {0}
@@ -3394,7 +3394,7 @@ axis	Both	Обидві
 @msg	empty brush stroke	порожній мазок пензля
 @msg	empty cutter	порожній різак
 @msg	empty path	порожній контур
-@msg	file version {0} is newer than this VectorCraft supports ({VERSION})	версія файлу {0} новіша, ніж підтримує цей VectorCraft ({VERSION})
+@msg	file version {0} is newer than this Vector Avelton supports ({VERSION})	версія файлу {0} новіша, ніж підтримує цей Vector Avelton ({VERSION})
 @msg	freeform point {i} needs `at` [x, y] and a valid `color`	довільній точці {i} потрібні `at` [x, y] та допустимий `color`
 @msg	give both `start` and `end` [x, y] (or neither)	вкажіть `start`, `end` [x, y] (або жодного)
 @msg	give corners of the path: anchors between two straight sides	вкажіть кути контуру: опорні точки між двома прямими сторонами
@@ -3411,9 +3411,9 @@ axis	Both	Обидві
 @msg	invalid PDF setting: {0}	неприпустимий параметр PDF: {0}
 @msg	invalid image data for `{0}`	неприпустимі дані зображення для `{0}`
 @msg	invalid parameters for `{cmd}`: {msg}	неприпустимі параметри для `{cmd}`: {msg}
-@msg	is not an image VectorCraft reads	не є зображенням, яке читає VectorCraft
-@msg	it uses `{at}`, which VectorCraft's PostScript reader doesn't know	використовує `{at}`, яке не знає читач PostScript у VectorCraft
-@msg	it uses `{at}`, which VectorCraft's PostScript reader doesn't know, in {procs}	використовує `{at}`, яке не знає читач PostScript у VectorCraft, у {procs}
+@msg	is not an image Vector Avelton reads	не є зображенням, яке читає Vector Avelton
+@msg	it uses `{at}`, which Vector Avelton's PostScript reader doesn't know	використовує `{at}`, яке не знає читач PostScript у Vector Avelton
+@msg	it uses `{at}`, which Vector Avelton's PostScript reader doesn't know, in {procs}	використовує `{at}`, яке не знає читач PostScript у Vector Avelton, у {procs}
 @msg	its Windows metafile preview was opened instead, which may simplify the art	натомість було відкрито його попереднє подання метафайлу Windows, що може спростити малюнок
 @msg	its preview was placed instead, at screen resolution	замість цього було вміщено його попереднє подання у роздільній здатності екрану
 @msg	join needs open paths	з’єднання вимагає відкритих контурів
@@ -3517,8 +3517,8 @@ axis	Both	Обидві
 @msg	no user workspace `{from}`	немає користувача робочого середовища `{from}`
 @msg	node {_1} is not text	вузол {_1} не є текстом
 @msg	not a DXF drawing	не є кресленням DXF
-@msg	not a VectorCraft file: {0}	не є файлом VectorCraft: {0}
-@msg	not a VectorCraft shortcut set (missing `overrides`)	не є набором поєднань клавіш VectorCraft (відсутнє `overrides`)
+@msg	not a Vector Avelton file: {0}	не є файлом Vector Avelton: {0}
+@msg	not a Vector Avelton shortcut set (missing `overrides`)	не є набором поєднань клавіш Vector Avelton (відсутнє `overrides`)
 @msg	not a graphic style library (format `{_1}`)	не є бібліотекою графічних стилів (формат `{_1}`)
 @msg	not a stored central record	не є збереженим центральним записом
 @msg	not a valid plug-in module: {0}	не є допустимим модулем: {0}
@@ -3737,9 +3737,9 @@ axis	Both	Обидві
 @msg	Sent to {_1}	Відправлено до {_1}
 @msg	{_1} files	{_1} файлів
 @msg	The graphics were lost and have been restarted	Графіка була втрачена та перезапущена
-@msg	The graphics processor tried first couldn't show the window, so VectorCraft started again on {summary}	Графічний процесор, обраний першим, не зміг показати вікно, тому VectorCraft запустився знову на {summary}
-@msg	Loading VectorCraft…	Завантаження VectorCraft…
-@msg	VectorCraft failed to start: {e}	VectorCraft не вдалося запустити: {e}
+@msg	The graphics processor tried first couldn't show the window, so Vector Avelton started again on {summary}	Графічний процесор, обраний першим, не зміг показати вікно, тому Vector Avelton запустився знову на {summary}
+@msg	Loading Vector Avelton…	Завантаження Vector Avelton…
+@msg	Vector Avelton failed to start: {e}	Vector Avelton не вдалося запустити: {e}
 @msg	A browser with WebGPU or WebGL2 is required.	Потрібен браузер із WebGPU або WebGL2.
 @msg	The graphics were lost and couldn't be restarted.	Графіку було втрачено, і її не вдалося перезапустити.
 @msg	Your unsaved changes are kept in this browser: reload the page to get them back.	Ваші незбережені зміни зберігаються у цьому браузері: перезавантажте сторінку, щоб повернути їх.
@@ -3758,23 +3758,23 @@ axis	Both	Обидві
 @msg	it has more than {MAX_NODES} objects	в них більше {MAX_NODES} об’єктів
 @msg	it has no layers	у них немає шарів
 @msg	it has too many values in a row	у них занадто багато значень поспіль
-@msg	it has {_1}, which VectorCraft doesn't read from it yet	у них є {_1}, які VectorCraft поки не читає
+@msg	it has {_1}, which Vector Avelton doesn't read from it yet	у них є {_1}, які Vector Avelton поки не читає
 @msg	its objects are nested too deeply	об’єкти в них вкладені надто глибоко
 @msg	its section ending with `%{end}` doesn't end	розділ, що закінчується на `%{end}`, не закінчується
 @msg	objects with several fills or strokes, effects or brushes came in as their drawn look ({_1}): their appearance isn't editable yet	об’єкти з кількома заливками або обведеннями, ефектами або пензлями імпортовані в намальованому вигляді ({_1}): їх оформлення поки що не можна редагувати
 @msg	gradient “{name}” isn't defined in the file: a plain colour stands in for it	градієнт «{name}» не визначено у файлі: замість нього використовується суцільний колір
-@msg	an image VectorCraft can't read was left out	зображення, яке VectorCraft не може прочитати, пропущено
+@msg	an image Vector Avelton can't read was left out	зображення, яке Vector Avelton не може прочитати, пропущено
 @msg	an image whose data is cut short was left out	зображення з обрізаними даними пропущено
 @msg	its editing data doesn't say where its art is	у даних редагування не зазначено, де знаходиться графіка
 @msg	this file was saved without PDF compatibility, and its editing data can't be read ({why})	цей файл збережений без сумісності з PDF, і його дані редагування не вдається прочитати ({why})
 @msg	No fonts are missing in this document	У цьому документі немає відсутніх шрифтів
-@msg	VectorCraft doesn't search other apps' or the system's folders: {path}	VectorCraft не шукає в папках інших програм і системи: {path}
-@msg	VectorCraft doesn't search the Shared or Public folder in Users: {path}	VectorCraft не шукає в папках Shared і Public у Users: {path}
+@msg	Vector Avelton doesn't search other apps' or the system's folders: {path}	Vector Avelton не шукає в папках інших програм і системи: {path}
+@msg	Vector Avelton doesn't search the Shared or Public folder in Users: {path}	Vector Avelton не шукає в папках Shared і Public у Users: {path}
 @msg	{path} is not a folder	{path} не є папкою
 @msg	the search couldn't start: try again in a moment	не вдалося почати пошук: спробуйте ще раз за мить
 @msg	searching a folder isn't available on the web	пошук у папці недоступний у веб-версії
 @msg	every search thread stopped on an internal error (please report this bug)	усі потоки пошуку зупинилися через внутрішню помилку (повідомте про цю помилку)
-@msg	VectorCraft's Fonts folder isn't set here: the desktop app and vectorcraft-cli set it	Папку Fonts VectorCraft тут не задано: її задають настільна програма та vectorcraft-cli
+@msg	Vector Avelton's Fonts folder isn't set here: the desktop app and vectorcraft-cli set it	Папку Fonts Vector Avelton тут не задано: її задають настільна програма та vectorcraft-cli
 @msg	choose the font files to add	виберіть файли шрифтів для додавання
 @msg	{n} font file(s) are now in {folder}	Файлів шрифтів тепер у {folder}: {n}
 @msg	{n} font file(s) are now in {folder}; {failed} couldn't be added: {reason}	Файлів шрифтів тепер у {folder}: {n}; не вдалося додати {failed}: {reason}
@@ -3786,7 +3786,7 @@ axis	Both	Обидві
 @msg	the files come to more than 1 GB: add fewer at a time	файли займають понад 1 ГБ: додавайте менше за раз
 @msg	every numbered name for it is taken in the Fonts folder	усі нумеровані імена для нього вже зайняті в папці Fonts
 	Services	Служби
-	Hide VectorCraft	Приховати VectorCraft
+	Hide Vector Avelton	Приховати Vector Avelton
 	Zoom	Масштаб
 	Bring All to Front	Усі вікна на передній план
 	Settings	Налаштування
@@ -3794,7 +3794,7 @@ axis	Both	Обидві
 	On: one locked object showing the document, updated when it changes.	Увімк.: один заблокований об’єкт, який показує документ і оновлюється під час його зміни.
 	Off: an editable copy of its art, embedded in this document.	Вимк.: редагована копія графіки, вбудована в цей документ.
 	Images: link to the file instead of only embedding it.	Зображення: пов’язувати із файлом замість простого впровадження.
-	VectorCraft documents: one locked object, updated when the file changes.	Документи VectorCraft: один заблокований об’єкт, який оновлюється під час зміни файлу.
+	Vector Avelton documents: one locked object, updated when the file changes.	Документи Vector Avelton: один заблокований об’єкт, який оновлюється під час зміни файлу.
 	A file dialog is open: choose there first	Відкрито вікно вибору файлу: спочатку зробіть вибір у ньому
 	Shaper	Формоутворення
 	Expand Shaper Group	Розібрати групу формоутворення
@@ -3819,3 +3819,4 @@ axis	Both	Обидві
 @msg	automation path rejected: cannot resolve {path}: {e}	шлях автоматизації відхилено: не вдається визначити {path}: {e}
 @msg	automation path rejected: parent traversal below a folder that doesn't exist: {path}	шлях автоматизації відхилено: перехід угору (..) з папки, якої не існує: {path}
 @msg	automation path rejected: reserved device names are not allowed: {path}	шлях автоматизації відхилено: зарезервовані імена пристроїв не дозволені: {path}
+	Simulate prints overprints as Overprint Preview shows them; separations always keep them. A preset flattens transparency before printing (PostScript files always flatten it).	Режим «Імітація» друкує накладання як у попередньому перегляді; під час кольороподілу вони завжди зберігаються. Набір параметрів зводить прозорість перед друком (у файлах PostScript вона зводиться завжди).

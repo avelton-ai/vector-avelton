@@ -6,7 +6,7 @@
 //! own folders, without installing them: the font folders and the registry don't list them. Since
 //! Windows 10 (version 1607) DirectWrite's system font collection holds them too
 //! (<https://learn.microsoft.com/windows/win32/directwrite/what-s-new-in-directwrite-for-windows-8-consumer-preview>,
-//! "Support for Adobe Typekit and other font-service clients"), so VectorCraft lists them as other
+//! "Support for Adobe Typekit and other font-service clients"), so Vector Avelton lists them as other
 //! apps do, reading the files in place (#579).
 //!
 //! DirectWrite is COM, which has no safe API, hence the scoped `unsafe_code` allowance.

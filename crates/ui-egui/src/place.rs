@@ -167,7 +167,7 @@ fn open_dialog(app: &mut VectorcraftApp, files: Vec<Value>) {
     ));
 }
 
-/// Is dialog file entry `file` a VectorCraft document on disk (what Link places as one locked
+/// Is dialog file entry `file` a Vector Avelton document on disk (what Link places as one locked
 /// object)?
 fn is_vectorcraft_file(file: &Value) -> bool {
     let native = ["vectorcraft", vectorcraft_format::LEGACY_EXTENSION, "vctemplate"];

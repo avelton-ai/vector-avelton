@@ -199,7 +199,7 @@ fn the_engine_follows_the_interface_language() {
     assert_eq!(app.ui_language().code(), "ja");
 }
 
-/// VectorCraft › Language (`app.language`) sets the `interfaceLanguage` preference, which is what
+/// Vector Avelton › Language (`app.language`) sets the `interfaceLanguage` preference, which is what
 /// persists; the checked item follows the preference, and a bad code is an error, not a change.
 #[test]
 fn language_command_sets_the_preference() {
@@ -389,15 +389,17 @@ pub fn tl_literals() -> std::collections::BTreeSet<String> {
                 let text = std::fs::read_to_string(&path).unwrap_or_default();
                 let code = text.split("#[cfg(test)]").next().unwrap_or("");
                 let mut rest = code;
-                while let Some(at) = rest.find("tl!(\"") {
-                    rest = &rest[at + 5..];
+                while let Some(at) = rest.find("tl!(") {
+                    rest = rest[at + 4..].trim_start();
+                    let Some(literal) = rest.strip_prefix('"') else { continue };
+                    rest = literal;
                     let mut end = 0;
                     let bytes = rest.as_bytes();
                     while end < bytes.len() && !(bytes[end] == b'"' && (end == 0 || bytes[end - 1] != b'\\')) {
                         end += 1;
                     }
                     let lit = rest.get(..end).unwrap_or("").replace("\\\"", "\"");
-                    if rest.get(end + 1..end + 2) == Some(")") {
+                    if rest.get(end + 1..).is_some_and(|tail| tail.trim_start().starts_with(')')) {
                         literals.insert(lit);
                     }
                 }
@@ -429,7 +431,7 @@ const KEEPS_MENU_NAMES: [&str; 8] = ["cs", "es", "fr", "it", "ja", "pt-br", "ru"
 /// names and the perspective grid presets (names, shown untranslated wherever else they appear).
 /// Each language's own name in the Language menu is left alone too.
 const MENU_KEEP_AS_IS: &[&str] = &[
-    "VectorCraft",
+    "Vector Avelton",
     "OpenType",
     "Essentials",
     "Essentials Classic",

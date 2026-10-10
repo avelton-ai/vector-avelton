@@ -1,4 +1,4 @@
-//! `vectorcraft-cli perf`: the performance budgets (plan §4) measured on a synthetic document.
+//! `vector-avelton-cli perf`: the performance budgets (plan §4) measured on a synthetic document.
 //!
 //! Each row is the median of several runs. Timings are wall-clock: on a busy machine (load
 //! average above the core count) they are noise, and the report says so.
@@ -124,7 +124,7 @@ pub fn run(args: &[String]) -> Result<(), String> {
     }
     let cores = std::thread::available_parallelism().map_or(1, |c| c.get());
     let load = load_average();
-    outln!("VectorCraft performance budgets — {n} paths, {cores} cores, load average {}", load.map_or("?".into(), |l| format!("{l:.1}")));
+    outln!("Vector Avelton performance budgets — {n} paths, {cores} cores, load average {}", load.map_or("?".into(), |l| format!("{l:.1}")));
     let noisy = load.is_some_and(|l| l > cores as f64 * 0.75);
     if noisy {
         outln!("WARNING: the machine is busy; wall-clock timings below are not trustworthy.");

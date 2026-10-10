@@ -17,7 +17,7 @@ pub trait Backend {
     fn describe(&self) -> String;
 }
 
-/// A running VectorCraft app, reached through its loopback control port.
+/// A running Vector Avelton app, reached through its loopback control port.
 pub struct Remote {
     addr: String,
     conn: Option<(BufReader<TcpStream>, TcpStream)>,
@@ -85,7 +85,7 @@ impl Backend for Remote {
                 self.conn = None;
                 self.roundtrip(&line).map_err(|e| {
                     self.conn = None;
-                    format!("VectorCraft app at {} is not reachable: {e}", self.addr)
+                    format!("Vector Avelton app at {} is not reachable: {e}", self.addr)
                 })?
             }
         };

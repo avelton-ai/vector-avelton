@@ -4,11 +4,11 @@ members = ["crates/*", "apps/*", "xtask"]
 default-members = ["crates/*", "apps/vectorcraft", "apps/vectorcraft-cli", "xtask"]
 
 [workspace.package]
-version = "0.8.0"
+version = "0.8.0-avelton.1"
 edition = "2024"
 license = "MIT OR Apache-2.0"
 rust-version = "1.95"
-repository = "https://github.com/storytold/vectorcraft"
+repository = "https://github.com/avelton-ai/vector-avelton"
 
 [workspace.dependencies]
 # internal
@@ -86,7 +86,7 @@ unsafe_code = "deny"
 
 [workspace.lints.clippy]
 dbg_macro = "warn"
-# VectorCraft never crashes: shipped code returns `Result`/`Option` instead of panicking (see
+# Vector Avelton never crashes: shipped code returns `Result`/`Option` instead of panicking (see
 # AGENTS.md › Robustness). Tests may unwrap (clippy.toml).
 unwrap_used = "deny"
 expect_used = "deny"

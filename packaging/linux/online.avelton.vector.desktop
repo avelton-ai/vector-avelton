@@ -1,14 +1,14 @@
 [Desktop Entry]
 Type=Application
-Name=VectorCraft
+Name=Vector Avelton
 GenericName=Vector Graphics Editor
 Comment=Draw and edit vector illustrations, SVG and PDF
-Exec=vectorcraft %F
-TryExec=vectorcraft
-Icon=ai.storyteller.vectorcraft
+Exec=vector-avelton %F
+TryExec=vector-avelton
+Icon=online.avelton.vector
 Terminal=false
 StartupNotify=true
-StartupWMClass=ai.storyteller.vectorcraft
+StartupWMClass=online.avelton.vector
 Categories=Graphics;2DGraphics;VectorGraphics;
 Keywords=vector;illustration;svg;pdf;drawing;bezier;
 MimeType=image/svg+xml;application/pdf;

@@ -37,7 +37,7 @@ pub fn app_bar(app: &mut VectorcraftApp, ui: &mut Ui) {
             // With the macOS menu bar the menus are at the top of the screen instead.
             let menus_end = if app.services.native_menu.is_some() {
                 let full = ui.max_rect();
-                ui.painter().text(full.center(), egui::Align2::CENTER_CENTER, "VectorCraft", egui::FontId::proportional(13.5), t.text);
+                ui.painter().text(full.center(), egui::Align2::CENTER_CENTER, "Vector Avelton", egui::FontId::proportional(13.5), t.text);
                 ui.cursor().min.x
             } else {
                 menus::menu_bar(app, ui)

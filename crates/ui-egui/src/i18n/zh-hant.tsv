@@ -12,7 +12,7 @@
 # Clean-room: every entry was written from the plain meaning of the English label using the
 # vector-drawing vocabulary in everyday use in Taiwan (錨點, 路徑, 筆畫, 填色, 工作區域, 路徑管理員 ...).
 # No proprietary localisation resource, string table or product UI was consulted or copied; add
-# entries the same way. Product and technology names (VectorCraft, ArtCraft, SVG, OpenType, CMYK,
+# entries the same way. Product and technology names (Vector Avelton, Avelton, SVG, OpenType, CMYK,
 # Lab ...) and paper sizes (Letter, Tabloid) stay in Latin letters; the trailing "…" of dialog
 # commands is kept. Full-width punctuation (，。：) inside sentences; half-width parentheses and
 # the " · " separators as in the English. Terms shared with PhotoCraft use the same words as its
@@ -56,7 +56,7 @@
 	A lower value follows the stroke closely; a higher one gives fewer points and smoother curves.	數值較小時會貼近筆畫，較大時則錨點較少、曲線較平滑。
 	A new preset starting from the selected one	以所選預設集為基礎建立新預設集
 	A saved copy of the selected preset	所選預設集的已儲存拷貝
-	About VectorCraft	關於 VectorCraft
+	About Vector Avelton	關於 Vector Avelton
 	above	以上
 	Absolute Position	絕對位置
 	Accurate	精確
@@ -159,7 +159,7 @@
 	Appearance Panel	外觀面板
 	Appearance panel	外觀面板
 	Applies when the linked file is relinked or updated.	重新連結或更新連結檔案時套用。
-	Applies the next time VectorCraft starts.	下次啟動 VectorCraft 時生效。
+	Applies the next time Vector Avelton starts.	下次啟動 Vector Avelton 時生效。
 	Apply	套用
 	Apply Brush	套用筆刷
 	Apply Character Style	套用字元樣式
@@ -197,8 +197,8 @@
 	Artboard {number}	工作區域 {number}
 	Artboard:	工作區域：
 	Artboards	工作區域
-	ArtCraft Website	ArtCraft 網站
-	ArtCraft website	ArtCraft 網站
+	Avelton Website	Avelton 網站
+	Avelton website	Avelton 網站
 	Artwork Colors	圖稿顏色
 	As Multiple Assets	作為多個資產
 	As Single Asset	作為單一資產
@@ -1271,8 +1271,8 @@
 	Japanese	日文
 	Join	連接
 	Join Our Discord	加入我們的 Discord
-	Join our Discord	加入我們的 Discord
-	Join the ArtCraft community on Discord (discord.gg/artcraft)	加入 Discord 上的 ArtCraft 社群 (discord.gg/artcraft)
+	Avelton support	Avelton 支援
+	Get support for Avelton on GitHub	Avelton 支援 (GitHub)
 	Join the lines of each paragraph	合併每個段落的各行
 	Join Tool	連接工具
 	Justification…	對齊設定…
@@ -1836,7 +1836,7 @@
 	Paragraph Style Options	段落樣式選項
 	Paragraph Styles	段落樣式
 	Paragraph Symbol	段落符號
-	Part of ArtCraft. MIT OR Apache-2.0. Fonts: Source Sans 3, Inter, JetBrains Mono (OFL). Icons: Lucide (ISC) + VectorCraft.	ArtCraft 的一部分。MIT OR Apache-2.0。字體：Source Sans 3、Inter、JetBrains Mono (OFL)。圖示：Lucide (ISC) + VectorCraft。
+	Part of Avelton. MIT OR Apache-2.0. Fonts: Source Sans 3, Inter, JetBrains Mono (OFL). Icons: Lucide (ISC) + Vector Avelton.	Avelton 的一部分。MIT OR Apache-2.0。字體：Source Sans 3、Inter、JetBrains Mono (OFL)。圖示：Lucide (ISC) + Vector Avelton。
 	Password	密碼
 	Paste	貼上
 	Paste in Back	貼至後方
@@ -2010,7 +2010,7 @@
 	Quarter Space	四分之一空格
 	Quick Actions	快速動作
 	Quickly start a new file	快速開始新檔案
-	Quit VectorCraft	結束 VectorCraft
+	Quit Vector Avelton	結束 Vector Avelton
 	Radar Graph Tool	雷達圖工具
 	Radial	放射狀
 	Radial Glows	放射狀光暈
@@ -2128,7 +2128,7 @@
 	{count} folder(s) or file(s) couldn't be read	有 {count} 個資料夾或檔案無法讀取
 	The search stopped at its limit: search a smaller folder.	搜尋已達上限而停止：請搜尋較小的資料夾。
 	Copy only fonts you own or are licensed to install.	只複製您擁有或已取得安裝授權的字體。
-	VectorCraft copies the fonts to {folder}.	VectorCraft 會將字體複製到 {folder}。
+	Vector Avelton copies the fonts to {folder}.	Vector Avelton 會將字體複製到 {folder}。
 	Registered Trademark Symbol	註冊商標符號
 	Registration marks	對位標記
 	Registry name:	登錄名稱：
@@ -2228,7 +2228,7 @@
 	Revert	回復
 	Revert to the saved version of “{name}”?	要回復為「{name}」已儲存的版本嗎？
 	Replace “{name}”, the file this document was opened from?	要取代「{name}」（開啟此文件的來源檔案）嗎？
-	Opening it left out what VectorCraft can't read yet ({what}), so replacing it loses that for good. Save under another name to keep it.	開啟時略過了 VectorCraft 尚無法讀取的內容（{what}），取代該檔案會永久遺失這些內容。若要保留，請以其他名稱儲存。
+	Opening it left out what Vector Avelton can't read yet ({what}), so replacing it loses that for good. Save under another name to keep it.	開啟時略過了 Vector Avelton 尚無法讀取的內容（{what}），取代該檔案會永久遺失這些內容。若要保留，請以其他名稱儲存。
 	Revolve…	迴轉…
 	RGB Color	RGB 色彩
 	Right	右
@@ -2992,11 +2992,11 @@
 	Vector Halftone	向量半色調
 	Vector Halftone…	向量半色調…
 	Vector illustration — fast, open, scriptable.	向量插圖：快速、開放、可用指令碼操控。
-	VectorCraft	VectorCraft
-	VectorCraft didn't quit normally last time. These documents had unsaved changes:	VectorCraft 上次未正常結束。下列文件有未儲存的變更：
-	VectorCraft Help…	VectorCraft 說明…
-	VectorCraft on getartcraft.com	getartcraft.com 上的 VectorCraft
-	VectorCraft on GitHub	GitHub 上的 VectorCraft
+	Vector Avelton	Vector Avelton
+	Vector Avelton didn't quit normally last time. These documents had unsaved changes:	Vector Avelton 上次未正常結束。下列文件有未儲存的變更：
+	Vector Avelton Help…	Vector Avelton 說明…
+	Vector Avelton on avelton.online	avelton.online 上的 Vector Avelton
+	Vector Avelton on GitHub	GitHub 上的 Vector Avelton
 	Vectors	向量
 	Version {version} — open-source vector illustration in pure Rust.	版本 {version} — 以純 Rust 打造的開放原始碼向量插畫軟體。
 	Version:	版本：
@@ -3036,7 +3036,7 @@
 	Web Snap:	網頁靠齊：
 	Weight	寬度
 	Weight:	寬度：
-	Welcome to VectorCraft	歡迎使用 VectorCraft
+	Welcome to Vector Avelton	歡迎使用 Vector Avelton
 	When pasting text	貼上文字時
 	White	白色
 	Widget Position:	Widget 位置：
@@ -3223,7 +3223,7 @@ axis	Both	兩者
 
 # The macOS menu bar (native_menu): the app and Window menus' system items, Settings pages.
 	Services	服務
-	Hide VectorCraft	隱藏 VectorCraft
+	Hide Vector Avelton	隱藏 Vector Avelton
 	Zoom	縮放
 	Bring All to Front	將全部移至最前
 	Settings	設定
@@ -3231,7 +3231,7 @@ axis	Both	兩者
 	On: one locked object showing the document, updated when it changes.	開啟：以單一鎖定物件顯示文件，文件變更時隨之更新。
 	Off: an editable copy of its art, embedded in this document.	關閉：將其圖稿的可編輯副本內嵌在此文件中。
 	Images: link to the file instead of only embedding it.	影像：連結至檔案，而不只是嵌入。
-	VectorCraft documents: one locked object, updated when the file changes.	VectorCraft 文件：單一鎖定物件，檔案變更時隨之更新。
+	Vector Avelton documents: one locked object, updated when the file changes.	Vector Avelton 文件：單一鎖定物件，檔案變更時隨之更新。
 	A file dialog is open: choose there first	檔案對話方塊已開啟：請先在其中選擇
 	Shaper	Shaper
 	Expand Shaper Group	展開 Shaper 群組
@@ -3257,3 +3257,4 @@ axis	Both	兩者
 	Draft	草稿
 	Good	良好
 	Best	最佳
+	Simulate prints overprints as Overprint Preview shows them; separations always keep them. A preset flattens transparency before printing (PostScript files always flatten it).	「模擬」會依疊印預覽的效果列印疊印；分色一律保留疊印。預設集會在列印前將透明度平面化（PostScript 檔案一律將透明度平面化）。

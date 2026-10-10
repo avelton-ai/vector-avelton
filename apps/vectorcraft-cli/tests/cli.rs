@@ -8,7 +8,7 @@ use serde_json::{Value, json};
 const BIN: &str = env!("CARGO_BIN_EXE_vectorcraft-cli");
 
 fn tmp(name: &str) -> std::path::PathBuf {
-    let dir = std::env::temp_dir().join(format!("vectorcraft-cli-test-{}", std::process::id()));
+    let dir = std::env::temp_dir().join(format!("vector-avelton-cli-test-{}", std::process::id()));
     std::fs::create_dir_all(&dir).unwrap();
     dir.join(name)
 }
@@ -284,7 +284,7 @@ fn mcp_protocol_over_stdio() {
     assert!(messages > 0, "no log records after logging/setLevel: {notes:?}");
 }
 
-/// `vectorcraft-cli commands | head -1` panicked with "failed printing to
+/// `vector-avelton-cli commands | head -1` panicked with "failed printing to
 /// stdout: Broken pipe (os error 32)" and exit status 101.
 #[test]
 fn closed_stdout_ends_quietly() {
