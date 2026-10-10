@@ -3479,3 +3479,4 @@ axis	Both	两者
 	Draft	草稿
 	Good	良好
 	Best	最佳
+	Simulate prints overprints as Overprint Preview shows them; separations always keep them. A preset flattens transparency before printing (PostScript files always flatten it).	“模拟”按叠印预览的效果打印叠印；分色始终保留叠印。预设会在打印前拼合透明度（PostScript 文件始终拼合透明度）。

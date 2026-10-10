@@ -3828,3 +3828,4 @@ theme	Appearance	外観
 @msg	automation path rejected: cannot resolve {path}: {e}	自動化のパスを拒否しました: {path} を解決できません: {e}
 @msg	automation path rejected: parent traversal below a folder that doesn't exist: {path}	自動化のパスを拒否しました: 存在しないフォルダーから上の階層 (..) へ移動しています: {path}
 @msg	automation path rejected: reserved device names are not allowed: {path}	自動化のパスを拒否しました: 予約済みのデバイス名は使用できません: {path}
+	Simulate prints overprints as Overprint Preview shows them; separations always keep them. A preset flattens transparency before printing (PostScript files always flatten it).	「シミュレート」はオーバープリントプレビューと同じようにオーバープリントを印刷します。分版では常に保持します。プリセットは印刷前に透明部分を分割・統合します（PostScript ファイルでは常に分割・統合します）。

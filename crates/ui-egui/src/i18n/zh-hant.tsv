@@ -3257,3 +3257,4 @@ axis	Both	兩者
 	Draft	草稿
 	Good	良好
 	Best	最佳
+	Simulate prints overprints as Overprint Preview shows them; separations always keep them. A preset flattens transparency before printing (PostScript files always flatten it).	「模擬」會依疊印預覽的效果列印疊印；分色一律保留疊印。預設集會在列印前將透明度平面化（PostScript 檔案一律將透明度平面化）。

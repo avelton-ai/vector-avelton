@@ -3819,3 +3819,4 @@ axis	Both	Обидві
 @msg	automation path rejected: cannot resolve {path}: {e}	шлях автоматизації відхилено: не вдається визначити {path}: {e}
 @msg	automation path rejected: parent traversal below a folder that doesn't exist: {path}	шлях автоматизації відхилено: перехід угору (..) з папки, якої не існує: {path}
 @msg	automation path rejected: reserved device names are not allowed: {path}	шлях автоматизації відхилено: зарезервовані імена пристроїв не дозволені: {path}
+	Simulate prints overprints as Overprint Preview shows them; separations always keep them. A preset flattens transparency before printing (PostScript files always flatten it).	Режим «Імітація» друкує накладання як у попередньому перегляді; під час кольороподілу вони завжди зберігаються. Набір параметрів зводить прозорість перед друком (у файлах PostScript вона зводиться завжди).

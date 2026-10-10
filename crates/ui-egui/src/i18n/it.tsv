@@ -3836,3 +3836,4 @@ axis	Both	Entrambi
 @msg	automation path rejected: cannot resolve {path}: {e}	percorso di automazione rifiutato: impossibile risolvere {path}: {e}
 @msg	automation path rejected: parent traversal below a folder that doesn't exist: {path}	percorso di automazione rifiutato: risale (..) da una cartella che non esiste: {path}
 @msg	automation path rejected: reserved device names are not allowed: {path}	percorso di automazione rifiutato: i nomi di dispositivo riservati non sono consentiti: {path}
+	Simulate prints overprints as Overprint Preview shows them; separations always keep them. A preset flattens transparency before printing (PostScript files always flatten it).	Simula stampa le sovrastampe come nell’anteprima; le separazioni le mantengono sempre. Un predefinito appiattisce la trasparenza prima della stampa (i file PostScript la appiattiscono sempre).
