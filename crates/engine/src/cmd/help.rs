@@ -24,7 +24,7 @@ pub fn specs() -> Vec<CommandSpec> {
     vec![
         cmd!(query "help.discord", "Avelton support", ["Help"], None, "{} → {url} Avelton support", always, |_, _| url(DISCORD_URL.into())),
         cmd!(query "help.website", "Avelton Website", ["Help"], None, "{} → {url}", always, |_, _| url(WEBSITE_URL.into())),
-        cmd!(query "help.appPage", "Vector Avelton website", ["Help"], None, "{} → {url} this app's page", always, |_, _| url(app_page_url())),
+        cmd!(query "help.appPage", "Vector Avelton on avelton.online", ["Help"], None, "{} → {url} this app's page", always, |_, _| url(app_page_url())),
         cmd!(query "help.github", "Vector Avelton on GitHub", ["Help"], None, "{} → {url} source code, issues and releases", always, |_, _| url(github_url())),
         cmd!(query "help.links", "Links", [], None, "{} → {discord, website, appPage, github}", always, |_, _| {
             Ok(json!({ "discord": DISCORD_URL, "website": WEBSITE_URL, "appPage": app_page_url(), "github": github_url() }))
