@@ -1,9 +1,9 @@
 //! macOS: files opened from Finder (double-click, Open With, a drop on the Dock icon) or with
-//! `open -a VectorCraft file`.
+//! `open -a Vector Avelton file`.
 //!
 //! macOS doesn't pass these on the command line: AppKit hands them to the application delegate's
 //! `application:openURLs:`, and when the delegate has no such method it asks `NSDocumentController`,
-//! which fails with "VectorCraft cannot open files in the … format" because VectorCraft isn't an
+//! which fails with "Vector Avelton cannot open files in the … format" because Vector Avelton isn't an
 //! `NSDocument` app. winit 0.30's delegate doesn't implement the method, so [`install`] adds it to
 //! the delegate's class when the app is about to finish launching: after winit set the delegate and
 //! before AppKit delivers the files the app was launched with. The handler queues the paths and

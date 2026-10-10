@@ -37,7 +37,7 @@ and window captures. The person at the keyboard is not: files opened from the co
 file dialog, and everything done with the mouse and keyboard, work as usual. The preferences that move
 folders the app reads or writes on its own (Additional Fonts Folder, Additional Plug-ins Folder, Data
 Recovery's folder, the Templates folder) can only be pointed inside the roots by automation. The app's own folders
-(preferences, Data Recovery, the library folders, VectorCraft's Fonts folder) are not confined, since no
+(preferences, Data Recovery, the library folders, Vector Avelton's Fonts folder) are not confined, since no
 agent names a path there. A path is checked, then opened: another program that swaps in a link between
 the two can still win that race.
 
@@ -505,7 +505,7 @@ for the next launch. While copies are written in the background `ui.inspect` lis
 ("Saving recovery data for <name>").
 
 Native save options: File → Save As to a native or `.ai` file opens the `saveOptions` dialog after the save panel
-(heading "VectorCraft Options" or "PDF-compatible .ai Options"). Fields: `separateArtboards`, `all` (true: every
+(heading "Vector Avelton Options" or "PDF-compatible .ai Options"). Fields: `separateArtboards`, `all` (true: every
 artboard; false: `range`, such as "1-3, 5"), `includeLinked`, `embedProfiles`, `pdfCompatible`, `compress`, and for
 native files `version` and `preview`. A bad range keeps the dialog open; `ui.dialog.confirm` writes the file and the
 artboards' files.

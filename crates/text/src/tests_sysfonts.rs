@@ -535,7 +535,7 @@ fn font_files_are_told_by_their_extension() {
     }
 }
 
-/// VectorCraft's own Fonts folder joins the scan once set, even before it exists; only the first
+/// Vector Avelton's own Fonts folder joins the scan once set, even before it exists; only the first
 /// folder set counts.
 #[test]
 fn the_app_font_folder_is_read_by_the_scan() {

@@ -317,7 +317,7 @@ const SKIPPED: &[(&str, &str)] = &[
 ];
 
 /// The note for a `/ForeignObject`, art the editor shows but doesn't edit.
-pub const NON_NATIVE_ART: &str = "non-native art (a placed PDF's content) is left out: VectorCraft doesn't draw it from the editing data yet";
+pub const NON_NATIVE_ART: &str = "non-native art (a placed PDF's content) is left out: Vector Avelton doesn't draw it from the editing data yet";
 
 /// A section comment's marker without its `AI<version>_` prefix and value (`AI14_BeginSymbol` →
 /// `BeginSymbol`); DSC comments (`%%BeginProlog`) keep their `%`.
@@ -1127,7 +1127,7 @@ impl<'a> Reader<'a> {
         let [_, _, _, _, w, h, bits, kind, alpha, _, binary, ..] = n.as_slice() else { return Ok(()) };
         let (w, h) = (*w as u64, *h as u64);
         if w == 0 || h == 0 || w.saturating_mul(h) > MAX_PIXELS || ![1.0, 8.0].contains(bits) {
-            self.warn("an image VectorCraft can't read was left out");
+            self.warn("an image Vector Avelton can't read was left out");
             return Ok(());
         }
         let channels: usize = match space.as_str() {
@@ -1186,7 +1186,7 @@ impl<'a> Reader<'a> {
         let Some(img) = image::RgbaImage::from_raw(w as u32, h as u32, rgba) else { return Ok(()) };
         let mut png = vec![];
         if img.write_to(&mut std::io::Cursor::new(&mut png), image::ImageFormat::Png).is_err() {
-            self.warn("an image VectorCraft can't read was left out");
+            self.warn("an image Vector Avelton can't read was left out");
             return Ok(());
         }
         // The matrix maps pixels (y down) into art space with its y flipped.
@@ -1240,11 +1240,11 @@ impl<'a> Reader<'a> {
     fn finish(mut self) -> Result<Structure, String> {
         if !self.unknown.is_empty() {
             let ops: Vec<String> = self.unknown.iter().map(|o| format!("`{o}`")).collect();
-            self.unsupported.insert(format!("operators VectorCraft doesn't know ({})", ops.join(", ")));
+            self.unsupported.insert(format!("operators Vector Avelton doesn't know ({})", ops.join(", ")));
         }
         if !self.unsupported.is_empty() {
             let list: Vec<&str> = self.unsupported.iter().map(String::as_str).collect();
-            return Err(format!("it has {}, which VectorCraft doesn't read from it yet", join_and(&list)));
+            return Err(format!("it has {}, which Vector Avelton doesn't read from it yet", join_and(&list)));
         }
         if self.doc.layers.is_empty() {
             return Err("it has no layers".into());

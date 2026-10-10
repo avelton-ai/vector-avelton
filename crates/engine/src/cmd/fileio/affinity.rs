@@ -1,6 +1,6 @@
 //! Affinity documents (`.af`, `.afdesign`, `.afphoto`, `.afpub`): the native layers, curves,
 //! shapes, artboards, text and images that `vectorcraft-affinity` reads, mapped to editable
-//! VectorCraft art. Whatever the reader could not map is listed in the warnings. A file whose
+//! Vector Avelton art. Whatever the reader could not map is listed in the warnings. A file whose
 //! native document can't be read opens as its embedded preview instead, with a warning that says
 //! why, and can't be placed.
 
@@ -197,13 +197,13 @@ impl Builder {
             Blend::Color => BlendMode::Color,
             Blend::Luminosity => BlendMode::Luminosity,
             _ => {
-                self.warn("blend modes VectorCraft doesn't have (Add, Linear Light, Vivid Light, Pin Light, Hard Mix, Subtract, Darker/Lighter Colour, Average, Negation, Reflect, Glow, Erase) import as Normal");
+                self.warn("blend modes Vector Avelton doesn't have (Add, Linear Light, Vivid Light, Pin Light, Hard Mix, Subtract, Darker/Lighter Colour, Average, Negation, Reflect, Glow, Erase) import as Normal");
                 BlendMode::Normal
             }
         }
     }
 
-    /// One Affinity node (and its subtree) as VectorCraft art; `to_doc` maps document pixels to
+    /// One Affinity node (and its subtree) as Vector Avelton art; `to_doc` maps document pixels to
     /// points. `layer_level`: the node is directly in a spread or a layer, so a layer stays a layer.
     fn node(&mut self, n: &af::Node, to_doc: Affine, boards: &mut Vec<(String, Rect)>, layer_level: bool) -> Option<Arc<Node>> {
         // Register before descending so nested artboards keep their document order.
@@ -239,7 +239,7 @@ impl Builder {
                     p.appearance = appearance;
                     p
                 } else {
-                    // A shape clips its children: VectorCraft's clipping path keeps its paint, its
+                    // A shape clips its children: Vector Avelton's clipping path keeps its paint, its
                     // fill behind the clipped art and its stroke over it, as Affinity draws it.
                     let mut clip = Node::new(self.doc.alloc_id(), NodeKind::Path { path: data, rule, live: None, clipping: true, guide: false });
                     clip.appearance = appearance;

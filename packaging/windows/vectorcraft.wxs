@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  VectorCraft MSI (WiX Toolset v5: `dotnet tool install -g wix`, plus the UI and Util extensions:
+  Vector Avelton MSI (WiX Toolset v5: `dotnet tool install -g wix`, plus the UI and Util extensions:
   `wix extension add -g WixToolset.UI.wixext/5.0.2 WixToolset.Util.wixext/5.0.2`). Built by package.ps1:
 
     wix build vectorcraft.wxs -arch x64 -ext WixToolset.UI.wixext -ext WixToolset.Util.wixext
       -culture en-US -loc vectorcraft.en-us.wxl -d Version=1.2.3 -d DisplayVersion=1.2.3-rc.1
       -d BinDir=... -d IconPath=... -d BannerBmp=... -d DialogBmp=... -o out.msi
 
-  Per-machine install with a setup wizard that names the version: Welcome, install folder (Program Files\VectorCraft by
+  Per-machine install with a setup wizard that names the version: Welcome, install folder (Program Files\Vector Avelton by
   default, remembered for upgrades), Ready, a progress page, and a Finish page with a ticked
-  "Launch VectorCraft" box. Installs a Start Menu shortcut and an App Paths entry (so `vectorcraft`
+  "Launch Vector Avelton" box. Installs a Start Menu shortcut and an App Paths entry (so `vectorcraft`
   starts from the Run dialog), plus vectorcraft-cli. `msiexec /qn` still installs silently.
 -->
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
      xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
   <Package
-      Name="VectorCraft"
-      Manufacturer="Learning Machines LLC"
+      Name="Vector Avelton"
+      Manufacturer="Avelton"
       Version="$(var.Version)"
-      UpgradeCode="601C6437-08AE-4645-ADCC-27F036C2EA2F"
+      UpgradeCode="ADEF91BD-766F-5DCE-887C-C5742C1711C8"
       Scope="perMachine"
       Compressed="yes"
       Language="1033">
-    <SummaryInformation Description="VectorCraft vector illustration app" Manufacturer="Learning Machines LLC" />
+    <SummaryInformation Description="Vector Avelton vector illustration app" Manufacturer="Avelton" />
     <!-- Same-version upgrades let successive pre-releases of one X.Y.Z replace each other
          (MSI versions are numeric, so 1.2.3-rc.1 and 1.2.3-rc.2 are both 1.2.3). -->
     <MajorUpgrade AllowSameVersionUpgrades="yes"
-        DowngradeErrorMessage="A newer version of VectorCraft is already installed." />
+        DowngradeErrorMessage="A newer version of Vector Avelton is already installed." />
     <MediaTemplate EmbedCab="yes" CompressionLevel="high" />
 
     <Icon Id="VectorcraftIcon.ico" SourceFile="$(var.IconPath)" />
     <Property Id="ARPPRODUCTICON" Value="VectorcraftIcon.ico" />
-    <Property Id="ARPURLINFOABOUT" Value="https://getartcraft.com/apps/vectorcraft" />
-    <Property Id="ARPURLUPDATEINFO" Value="https://getartcraft.com/apps/vectorcraft" />
-    <Property Id="ARPHELPLINK" Value="https://discord.gg/artcraft" />
+    <Property Id="ARPURLINFOABOUT" Value="https://vector.avelton.online" />
+    <Property Id="ARPURLUPDATEINFO" Value="https://vector.avelton.online" />
+    <Property Id="ARPHELPLINK" Value="https://github.com/avelton-ai/vector-avelton/issues" />
 
     <StandardDirectory Id="ProgramFiles6432Folder">
-      <Directory Id="INSTALLFOLDER" Name="VectorCraft" />
+      <Directory Id="INSTALLFOLDER" Name="Vector Avelton" />
     </StandardDirectory>
     <StandardDirectory Id="ProgramMenuFolder" />
 
     <!-- An upgrade installs where the user put the previous version (written by VectorcraftApp). -->
     <Property Id="INSTALLFOLDER">
-      <RegistrySearch Id="PreviousInstallFolder" Root="HKLM" Key="Software\VectorCraft" Name="InstallDir" Type="raw" />
+      <RegistrySearch Id="PreviousInstallFolder" Root="HKLM" Key="Software\Vector Avelton" Name="InstallDir" Type="raw" />
     </Property>
 
-    <Feature Id="Main" Title="VectorCraft" Level="1">
+    <Feature Id="Main" Title="Vector Avelton" Level="1">
       <ComponentGroupRef Id="VectorcraftFiles" />
     </Feature>
 
@@ -67,8 +67,8 @@
     <Property Id="VectorcraftVersion" Value="$(var.DisplayVersion)" />
 
     <!-- Finish page: say where to find the app, and offer to start it (ticked by default). -->
-    <Property Id="WIXUI_EXITDIALOGOPTIONALTEXT" Value="VectorCraft $(var.DisplayVersion) is installed. You can start it any time from the Start menu." />
-    <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Launch VectorCraft" />
+    <Property Id="WIXUI_EXITDIALOGOPTIONALTEXT" Value="Vector Avelton $(var.DisplayVersion) is installed. You can start it any time from the Start menu." />
+    <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Launch Vector Avelton" />
     <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOX" Value="1" />
     <Property Id="WixShellExecTarget" Value="[#VectorcraftExe]" />
     <!-- Runs in the wizard's own (unelevated) process, so the app starts as the user, not as admin. -->
@@ -77,19 +77,27 @@
 
   <Fragment>
     <ComponentGroup Id="VectorcraftFiles" Directory="INSTALLFOLDER">
-      <Component Id="VectorcraftApp" Guid="0E8C6C5E-DE4A-4E1D-9DB0-44E8E38C2103">
-        <File Id="VectorcraftExe" Source="$(var.BinDir)\vectorcraft.exe" KeyPath="yes">
-          <Shortcut Id="StartMenuShortcut" Directory="ProgramMenuFolder" Name="VectorCraft"
-              Description="VectorCraft vector illustration app" WorkingDirectory="INSTALLFOLDER" Advertise="yes"
+      <Component Id="VectorcraftApp" Guid="FCA6721D-640D-538F-A5B8-91AD85250162">
+        <File Id="VectorcraftExe" Source="$(var.BinDir)\vector-avelton.exe" KeyPath="yes">
+          <Shortcut Id="StartMenuShortcut" Directory="ProgramMenuFolder" Name="Vector Avelton"
+              Description="Vector Avelton vector illustration app" WorkingDirectory="INSTALLFOLDER" Advertise="yes"
               Icon="VectorcraftIcon.ico" IconIndex="0" />
         </File>
 
-        <RegistryValue Root="HKLM" Key="Software\Microsoft\Windows\CurrentVersion\App Paths\vectorcraft.exe" Value="[#VectorcraftExe]" Type="string" />
-        <RegistryValue Root="HKLM" Key="Software\VectorCraft" Name="InstallDir" Value="[INSTALLFOLDER]" Type="string" />
+        <RegistryValue Root="HKLM" Key="Software\Microsoft\Windows\CurrentVersion\App Paths\vector-avelton.exe" Value="[#VectorcraftExe]" Type="string" />
+        <RegistryValue Root="HKLM" Key="Software\Vector Avelton" Name="InstallDir" Value="[INSTALLFOLDER]" Type="string" />
       </Component>
 
       <Component Id="VectorcraftCli">
-        <File Id="VectorcraftCliExe" Source="$(var.BinDir)\vectorcraft-cli.exe" KeyPath="yes" />
+        <File Id="VectorcraftCliExe" Source="$(var.BinDir)\vector-avelton-cli.exe" KeyPath="yes" />
+      </Component>
+      <Component Id="AveltonNotices" Guid="E74E0544-B44B-5C4B-89E0-555C9EC09B82">
+        <File Id="AveltonNotice0" Source="$(sys.SOURCEFILEDIR)..\..\NOTICE" />
+        <File Id="AveltonNotice1" Source="$(sys.SOURCEFILEDIR)..\..\avelton.json" />
+        <File Id="AveltonNotice2" Source="$(sys.SOURCEFILEDIR)..\..\assets\fonts\OFL-Inter.txt" />
+        <File Id="AveltonNotice3" Source="$(sys.SOURCEFILEDIR)..\..\assets\fonts\OFL-JetBrainsMono.txt" />
+        <File Id="AveltonNotice4" Source="$(sys.SOURCEFILEDIR)..\..\assets\fonts\OFL-SourceSans3.txt" />
+        <File Id="AveltonNotice5" Source="$(sys.SOURCEFILEDIR)..\..\assets\fonts\OFL-SourceSerif4.txt" />
       </Component>
     </ComponentGroup>
   </Fragment>

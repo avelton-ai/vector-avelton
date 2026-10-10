@@ -1,7 +1,7 @@
 # Windows 7 x64 compatibility build (experimental, unsupported)
 
 Windows 7 is not a supported platform. This build is experimental and community-maintained,
-and the VectorCraft maintainers have not verified it on Windows 7.
+and the Vector Avelton maintainers have not verified it on Windows 7.
 
 This separate build targets **64-bit Windows 7 SP1**. It uses OpenGL instead of wgpu,
 and omits the native AccessKit accessibility adapter. Printer discovery supports the

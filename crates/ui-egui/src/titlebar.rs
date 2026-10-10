@@ -276,7 +276,7 @@ mod tests {
             // Wide windows show the whole group; narrow ones drop Discord and shorten the search.
             let texts: Vec<String> = texts(&out).into_iter().map(|(t, _)| t).collect();
             let has = |s: &str| texts.iter().any(|t| t == s);
-            assert_eq!((has("Discord"), has("Search commands and tools")), (width > 1000.0, width > 1000.0), "{width}: {texts:?}");
+            assert_eq!((has("Support"), has("Search commands and tools")), (width > 1000.0, width > 1000.0), "{width}: {texts:?}");
         }
     }
 

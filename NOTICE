@@ -72,3 +72,10 @@ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Avelton distribution
+Based on VectorCraft, https://github.com/storytold/vectorcraft, commit 2d6014583a42ef2a96978398342581301cbfa86d.
+Original source copyrights and licences above are retained.
+Original Avelton geometric artwork: copyright 2026 Avelton contributors, MIT OR Apache-2.0.
+Inter lettering: OFL-1.1, see the bundled Inter font licence.
+Avelton is independently maintained; no endorsement by the upstream authors is implied.

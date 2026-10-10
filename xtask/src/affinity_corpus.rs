@@ -128,7 +128,7 @@ pub fn fetch() -> Result<(), String> {
             if !verified(&out, sha) {
                 let url = format!("https://raw.githubusercontent.com/{repo}/{commit}/{path}");
                 let mut curl = Command::new("curl");
-                curl.args(["-fsSL", "--retry", "3", "-A", "VectorCraft-dev", "-o"]).arg(&out).arg(&url);
+                curl.args(["-fsSL", "--retry", "3", "-A", "Vector Avelton-dev", "-o"]).arg(&out).arg(&url);
                 run(curl, &format!("curl {url}"))?;
                 if !verified(&out, sha) {
                     let _ = std::fs::remove_file(&out);

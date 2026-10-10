@@ -1,0 +1,16 @@
+{
+  "name": "Vector Avelton",
+  "slug": "vector-avelton",
+  "domain": "vector.avelton.online",
+  "app_id": "online.avelton.vector",
+  "version": "0.8.0-avelton.1",
+  "upstream": {
+    "repository": "storytold/vectorcraft",
+    "commit": "2d6014583a42ef2a96978398342581301cbfa86d",
+    "installer_upgrade_code": "601C6437-08AE-4645-ADCC-27F036C2EA2F"
+  },
+  "release": {
+    "unsigned": true,
+    "channel": "alpha"
+  }
+}

@@ -199,7 +199,7 @@ fn the_engine_follows_the_interface_language() {
     assert_eq!(app.ui_language().code(), "ja");
 }
 
-/// VectorCraft › Language (`app.language`) sets the `interfaceLanguage` preference, which is what
+/// Vector Avelton › Language (`app.language`) sets the `interfaceLanguage` preference, which is what
 /// persists; the checked item follows the preference, and a bad code is an error, not a change.
 #[test]
 fn language_command_sets_the_preference() {
@@ -429,7 +429,7 @@ const KEEPS_MENU_NAMES: [&str; 8] = ["cs", "es", "fr", "it", "ja", "pt-br", "ru"
 /// names and the perspective grid presets (names, shown untranslated wherever else they appear).
 /// Each language's own name in the Language menu is left alone too.
 const MENU_KEEP_AS_IS: &[&str] = &[
-    "VectorCraft",
+    "Vector Avelton",
     "OpenType",
     "Essentials",
     "Essentials Classic",
